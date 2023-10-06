@@ -5,5 +5,8 @@ using UnityEngine;
 using System;
 public class GameManager : MonoBehaviour 
 {
-    public List<Card_DataForm> card_DataForms = new List<Card_DataForm>();
+    public List<CardData> test_DataForms = new List<CardData>();
+    public List<CardData> commander_DataList = new List<CardData>();
+    public List<CardData> unit_DataList = new List<CardData>();
+    public List<CardData> magic_DataList = new List<CardData>();
 }
