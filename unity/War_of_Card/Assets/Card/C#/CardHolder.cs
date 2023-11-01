@@ -13,7 +13,7 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class CardHolder : MonoBehaviour
 {
-    private const int Null = -1;    // 널 값
+  /*  private const int Null = -1;    // 널 값
 
     [Header("연결")] 
     [SerializeField] private Physics2DRaycaster raycaster;          // 마우스 오버된 카드를 찾기 위한 레이케스터
@@ -381,5 +381,5 @@ public class CardHolder : MonoBehaviour
             // 0.1초 대기
             yield return new WaitForSeconds(0.1f);
         }
-    }
+    }*/
 }
