@@ -6,18 +6,22 @@ using UnityEngine.EventSystems;
 public class Card_Hand : MonoBehaviour
 {
     public GameObject[] cardPrefab; // 카드 프리팹
-    public Transform cardStack; // 카드 스택을 나타내는 부모 Transform
     private float cardXOffset = 5.0f; // 각 카드의 X 축 간격
     private float nextCardX = 0.0f; // 다음 카드의 X 위치
     private float cardZOffset = 0.5f; // 각 카드의 Z 축 간격
     private float nextCardZ = 0.0f; // 다음 카드의 Z 위치
-
+    private AudioSource cardAudioSource;
+    int draw_count = 0;
     private void Update()
     {
         // 특정 키 (예: 'C' 키)를 눌렀을 때 카드를 생성합니다.
         if (Input.GetKeyDown(KeyCode.C))
         {
-            SpawnCard();
+            if (draw_count <= 5)
+            {
+                SpawnCard();
+                draw_count++;
+            }
         }
     }
 
