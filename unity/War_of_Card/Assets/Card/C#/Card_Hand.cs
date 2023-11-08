@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Card_Hand : MonoBehaviour
 {
-    public GameObject[] cardPrefab; // Ä«µå ÇÁ¸®ÆÕ
-    private float cardXOffset = 5.0f; // °¢ Ä«µåÀÇ X Ãà °£°İ
-    private float nextCardX = 0.0f; // ´ÙÀ½ Ä«µåÀÇ X À§Ä¡
-    private float cardZOffset = 0.5f; // °¢ Ä«µåÀÇ Z Ãà °£°İ
-    private float nextCardZ = 0.0f; // ´ÙÀ½ Ä«µåÀÇ Z À§Ä¡
+    public GameObject[] cardPrefab; // ì¹´ë“œ í”„ë¦¬íŒ¹
+    private float cardXOffset = 5.0f; // ê° ì¹´ë“œì˜ X ì¶• ê°„ê²©
+    private float nextCardX = 0.0f; // ë‹¤ìŒ ì¹´ë“œì˜ X ìœ„ì¹˜
+    private float cardZOffset = 0.5f; // ê° ì¹´ë“œì˜ Z ì¶• ê°„ê²©
+    private float nextCardZ = 0.0f; // ë‹¤ìŒ ì¹´ë“œì˜ Z ìœ„ì¹˜
     private AudioSource cardAudioSource;
     int draw_count = 0;
     private void Update()
     {
-        // Æ¯Á¤ Å° (¿¹: 'C' Å°)¸¦ ´­·¶À» ¶§ Ä«µå¸¦ »ı¼ºÇÕ´Ï´Ù.
+        // íŠ¹ì • í‚¤ (ì˜ˆ: 'C' í‚¤)ë¥¼ ëˆŒë €ì„ ë•Œ ì¹´ë“œë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (draw_count <= 5)
@@ -24,20 +25,21 @@ public class Card_Hand : MonoBehaviour
             }
         }
     }
-
+    
     void SpawnCard()
     {
         int minR = 0, maxR = 4;
         int IndexR = Random.Range(minR, maxR);
-        // »õ Ä«µå »ı¼º
+        // ìƒˆ ì¹´ë“œ ìƒì„±
         GameObject newCard = Instantiate(cardPrefab[IndexR]);
 
-        // »õ Ä«µåÀÇ Y À§Ä¡¸¦ Á¶ÀıÇÏ¿© °ãÄ¡Áö ¾Ê°Ô ¸¸µì´Ï´Ù.
+        // ìƒˆ ì¹´ë“œì˜ Y ìœ„ì¹˜ë¥¼ ì¡°ì ˆí•˜ì—¬ ê²¹ì¹˜ì§€ ì•Šê²Œ ë§Œë“­ë‹ˆë‹¤.
         Vector3 cardPosition = new Vector3(nextCardX, 0, nextCardZ);
         newCard.transform.position = cardPosition;
 
-        // ´ÙÀ½ Ä«µåÀÇ X, Z À§Ä¡¸¦ ¾÷µ¥ÀÌÆ®
+        // ë‹¤ìŒ ì¹´ë“œì˜ X, Z ìœ„ì¹˜ë¥¼ ì—…ë°ì´íŠ¸
         nextCardX += cardXOffset;
         nextCardZ -= cardZOffset;
     }
+    
 }
