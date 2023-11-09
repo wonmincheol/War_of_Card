@@ -4,13 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// 손에 있는 카드를 관리하는 클래스.
-/// 1. 카드를 뽑거나 버린다.
-/// 2. 카드를 일정 간격으로 정렬한다.
-/// 3. 마우스 오버된 카드를 확대한다.
-/// 4. 카드를 사용한다.
-/// </summary>
+
 public class CardHolder : MonoBehaviour
 {
   /*  private const int Null = -1;    // 널 값

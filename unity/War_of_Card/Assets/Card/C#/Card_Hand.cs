@@ -6,7 +6,11 @@ using UnityEngine.EventSystems;
 
 public class Card_Hand : MonoBehaviour
 {
-    public GameObject[] cardPrefab; // 카드 프리팹
+    public static Card_Hand Inst { get; private set; }
+    void Awake() => Inst = this;
+    [SerializeField] ItemSO itemSO;
+    List<Item> itemBuffer;
+   /* public GameObject[] cardPrefab; // 카드 프리팹
     private float cardXOffset = 5.0f; // 각 카드의 X 축 간격
     private float nextCardX = 0.0f; // 다음 카드의 X 위치
     private float cardZOffset = 0.5f; // 각 카드의 Z 축 간격
@@ -39,6 +43,45 @@ public class Card_Hand : MonoBehaviour
         // 다음 카드의 X, Z 위치를 업데이트
         nextCardX += cardXOffset;
         nextCardZ -= cardZOffset;
+    }*/
+   public Item PopItem()
+    {
+        if(itemBuffer.Count == 0)
+        {
+            SetupItemBuffer();
+            Item item = itemBuffer[0];
+            itemBuffer.RemoveAt(0);
+            return item;
+        }
     }
-    
+    void SetupItemBuffer()
+    {
+        itemBuffer = new List<Item>();
+        for(int i=0;i<itemSO.items.Length;i++)
+        {
+            Item item = itemSO.items[i];
+            for(int j = 0; j < item.percent; j++)
+            {
+                itemBuffer.Add(item);
+            }
+        }
+        for(int i = 0; i < itemBuffer.Count; i++)
+        {
+            int rand = Random.Range(i,itemBuffer.Count);
+            Item temp = itemBuffer[i];
+            itemBuffer[i] = itemBuffer[rand];
+            itemBuffer[rand] = temp;
+        }
+    }
+   void Start()
+    {
+        SetupItemBuffer();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            print(PopItem().name);
+        }
+    }
 }
