@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemSO : ScriptableObject
-{
+{//카드의 데이터 인덱스 배열화
     public CardData[] items;
 }
 public class Card_Hand : MonoBehaviour
@@ -49,7 +49,7 @@ public class Card_Hand : MonoBehaviour
         nextCardZ -= cardZOffset;
     }*/
    public CardData PopItem()
-    {
+    {//카드 사용 후 버퍼에서 삭제
         if(itemBuffer.Count == 0)
         {
             SetupItemBuffer();
@@ -61,6 +61,7 @@ public class Card_Hand : MonoBehaviour
     void SetupItemBuffer()          
     {
         itemBuffer = new List<CardData>();
+        //scene 변수 대신 버퍼 제작
         for(int i=0;i< itemSO.items.Length;i++)
         {
             CardData item = itemSO.items[i];
@@ -76,12 +77,5 @@ public class Card_Hand : MonoBehaviour
    void Start()
     {
         SetupItemBuffer();
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            print(PopItem().card_Name);
-        }
     }
 }
