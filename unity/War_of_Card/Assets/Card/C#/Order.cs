@@ -30,10 +30,5 @@ public class Order : MonoBehaviour
             renderer.sortingLayerName = sortingLayerName;
             renderer.sortingOrder = mulOrder; 
         }
-        foreach (var renderer in middleRenderers)
-        {
-            renderer.sortingLayerName = sortingLayerName;
-            renderer.sortingOrder = mulOrder + 1;
-        }
     }
 }

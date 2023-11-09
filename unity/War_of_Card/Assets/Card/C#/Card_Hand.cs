@@ -4,10 +4,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Card_Hand : MonoBehaviour
+public class ItemSO : ScriptableObject
 {
+    public CardData[] items;
+}
+public class Card_Hand : MonoBehaviour
+{   
     public static Card_Hand Inst { get; private set; }
     void Awake() => Inst = this;
+    [SerializeField] ItemSO itemSO;
     List<CardData> itemBuffer;
    /* public GameObject[] cardPrefab; // 카드 프리팹
     private float cardXOffset = 5.0f; // 각 카드의 X 축 간격
@@ -48,21 +53,17 @@ public class Card_Hand : MonoBehaviour
         if(itemBuffer.Count == 0)
         {
             SetupItemBuffer();
-            CardData item = itemBuffer[0];
-            itemBuffer.RemoveAt(0);
-            return item;
         }
+        CardData item = itemBuffer[0];
+        itemBuffer.RemoveAt(0);
+        return item;
     }
     void SetupItemBuffer()          
     {
         itemBuffer = new List<CardData>();
-        for(int i=0;i< CardData.items.Length;i++)
+        for(int i=0;i< itemSO.items.Length;i++)
         {
             CardData item = itemSO.items[i];
-            for(int j = 0; j < item.percent; j++)
-            {
-                itemBuffer.Add(item);
-            }
         }
         for(int i = 0; i < itemBuffer.Count; i++)
         {
@@ -80,7 +81,7 @@ public class Card_Hand : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            print(PopItem().name);
+            print(PopItem().card_Name);
         }
     }
 }
