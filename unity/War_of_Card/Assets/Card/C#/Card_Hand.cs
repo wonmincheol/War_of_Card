@@ -8,8 +8,7 @@ public class Card_Hand : MonoBehaviour
 {
     public static Card_Hand Inst { get; private set; }
     void Awake() => Inst = this;
-    [SerializeField] ItemSO itemSO;
-    List<Item> itemBuffer;
+    List<CardData> itemBuffer;
    /* public GameObject[] cardPrefab; // 카드 프리팹
     private float cardXOffset = 5.0f; // 각 카드의 X 축 간격
     private float nextCardX = 0.0f; // 다음 카드의 X 위치
@@ -44,22 +43,22 @@ public class Card_Hand : MonoBehaviour
         nextCardX += cardXOffset;
         nextCardZ -= cardZOffset;
     }*/
-   public Item PopItem()
+   public CardData PopItem()
     {
         if(itemBuffer.Count == 0)
         {
             SetupItemBuffer();
-            Item item = itemBuffer[0];
+            CardData item = itemBuffer[0];
             itemBuffer.RemoveAt(0);
             return item;
         }
     }
-    void SetupItemBuffer()
+    void SetupItemBuffer()          
     {
-        itemBuffer = new List<Item>();
-        for(int i=0;i<itemSO.items.Length;i++)
+        itemBuffer = new List<CardData>();
+        for(int i=0;i< CardData.items.Length;i++)
         {
-            Item item = itemSO.items[i];
+            CardData item = itemSO.items[i];
             for(int j = 0; j < item.percent; j++)
             {
                 itemBuffer.Add(item);
@@ -68,7 +67,7 @@ public class Card_Hand : MonoBehaviour
         for(int i = 0; i < itemBuffer.Count; i++)
         {
             int rand = Random.Range(i,itemBuffer.Count);
-            Item temp = itemBuffer[i];
+            CardData temp = itemBuffer[i];
             itemBuffer[i] = itemBuffer[rand];
             itemBuffer[rand] = temp;
         }
