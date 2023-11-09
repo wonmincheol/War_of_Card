@@ -11,7 +11,6 @@ public class Card_Hand : MonoBehaviour
     private float nextCardX = 0.0f; // 다음 카드의 X 위치
     private float cardZOffset = 0.5f; // 각 카드의 Z 축 간격
     private float nextCardZ = 0.0f; // 다음 카드의 Z 위치
-    private AudioSource cardAudioSource;
     int draw_count = 0;
     private void Update()
     {
