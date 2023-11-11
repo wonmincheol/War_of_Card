@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
+
 
 public class CardManager : MonoBehaviour
 {
@@ -136,7 +137,7 @@ public class CardManager : MonoBehaviour
     {
         // 랜덤한 카드 프리팹을 선택 => dack 안에서 카드 출력
         // cardPrefabs => dack 
-        int randomIndex = System.Random.Range(0, cardPrefabs.Length);
+        int randomIndex = Random(cardPrefabs.Length);
         GameObject newCardPrefab = cardPrefabs[randomIndex];
 
         // 새 카드 생성 -> 생성된 dack을 삭제하지 않기 위해서 새로운 
