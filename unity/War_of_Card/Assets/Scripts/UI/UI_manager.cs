@@ -6,6 +6,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
+enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY };
+
 public class UI_manager : MonoBehaviour
 {
     //ui 총괄리자 스크립트
@@ -43,6 +47,7 @@ public class UI_manager : MonoBehaviour
     //마우스 클릭을 땔때 처리
     void MouseKeyUp_object()
     {
+        //카드 데이터
         if (Input.GetMouseButtonUp(0))
         {
             for (int j = 0; j < summonObject.transform.childCount; j++)
@@ -71,23 +76,75 @@ public class UI_manager : MonoBehaviour
                 // Debug.Log(hit.transform.gameObject.name);
                 hitObject = hit.transform.gameObject;
                 // if조건에 알맞는 오브젝트 
-                if (true)
+                State state = State.UNIT;
+                //Commander
+                if (hitObject.tag == "COMMANDER")
                 {
-                    if (summonObject != null && summonObject.transform.childCount == 0)
-                    {
-                        Get_Card(hitObject.name).transform.parent = summonObject.transform;
-                        GameObject obj = summonObject.transform.GetChild(0).gameObject;
-                        if (camera.ScreenToViewportPoint(hitObject.transform.position).x < 0)
-                        {
-                            obj.transform.localPosition = new Vector3(+250, hitObject.transform.position.y, -120);
-                        }
-                        else
-                        {
-                            obj.transform.localPosition = new Vector3(-250, hitObject.transform.position.y, -120);
-
-                        }
-                    }
+                    state = State.COMMANDER;
                 }
+                //Magic
+                else if (hitObject.tag == "MAGIC")
+                {
+                    state = State.MAGIC;
+                }
+                //Place
+                else if (hitObject.tag == "PLACE")
+                {
+                    state = State.PLCAE;
+                }
+                //Deck
+                else if (hitObject.tag == "DECK")
+                {
+                    state = State.DECK;
+                }
+                //GY
+                else if (hitObject.tag == "GY")
+                {
+                    state = State.GY;
+                }
+                //Card
+                else
+                {
+                    state = State.UNIT;
+                }
+
+
+
+                switch (state)
+                {
+                    case State.COMMANDER:
+                        break;
+                    case State.MAGIC:
+                        break;
+                    case State.PLCAE:
+                        break;
+                    case State.DECK:
+                        break;
+                    case State.GY:
+                        break;
+                    case State.UNIT:
+                        if (true)
+                        {
+                            if (summonObject != null && summonObject.transform.childCount == 0)
+                            {
+                                Get_Card(hitObject.name).transform.parent = summonObject.transform;
+                                GameObject obj = summonObject.transform.GetChild(0).gameObject;
+                                if (camera.ScreenToViewportPoint(hitObject.transform.position).x < 0)
+                                {
+                                    obj.transform.localPosition = new Vector3(+250, hitObject.transform.position.y, -120);
+                                }
+                                else
+                                {
+                                    obj.transform.localPosition = new Vector3(-250, hitObject.transform.position.y, -120);
+
+                                }
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
             }
         }
     }
