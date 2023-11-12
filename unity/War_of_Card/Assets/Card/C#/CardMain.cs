@@ -46,8 +46,6 @@ public class CardMain : MonoBehaviour
     }
     void AddCard()
     {
-        //var cardobject = Instantiate(cardPrefab,Vector3.zero,Quaternion.identity);
-        var card = cardobject.GetComponent<Card>();
-        card.Setup(PopItem());
+        
     }
 }
