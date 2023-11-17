@@ -1116,9 +1116,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 3808297361765984347, guid: ea9574feeef24a64e9d4371d05d25b40, type: 3}
+  camera: {fileID: 1406075818}
   count: 0
   Myhand:
   - {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 32
   card_padding: 30
 --- !u!1 &541995928
 GameObject:

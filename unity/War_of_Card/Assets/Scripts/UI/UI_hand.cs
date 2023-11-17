@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UI_hand : MonoBehaviour
 {
     //Temp : Card_generate develop
     public GameObject card;
+    public Camera camera;
     public int count;
 
     public List<GameObject> Myhand = new List<GameObject>();
 
+    public LayerMask layer;
     const int Max_hand = 10;
 
     int now_hand;
@@ -35,6 +38,7 @@ public class UI_hand : MonoBehaviour
             Draw();
             hand_position();
         }
+        Select_card();
     }
 
     void hand_position()
@@ -66,7 +70,7 @@ public class UI_hand : MonoBehaviour
 
         pos.Sort();
 
-        Debug.Log(string.Join(",", pos));
+        // Debug.Log(string.Join(",", pos));
 
 
 
@@ -75,6 +79,59 @@ public class UI_hand : MonoBehaviour
         {
             Myhand[i].GetComponent<UI_handMove>().myPos = new Vector3(pos[i], -150, -120);
         }
+    }
+
+
+    void Select_card()
+    {
+
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Vector3 point = new Vector2(0, 0);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+
+            if (hit.transform.gameObject.tag == "Card")
+            {
+                point = hit.point;
+            }
+            else
+            {
+                return;
+            }
+        }
+        else
+        {
+            return;
+        }
+
+        float length_min = float.MaxValue;
+        GameObject close_gameobject = null;
+        foreach (GameObject my_hand in Myhand)
+        {
+            float now_length = ((my_hand.transform.position) - point).magnitude;
+            if (now_length < length_min)
+            {
+                length_min = now_length;
+                close_gameobject = my_hand;
+            }
+        }
+        Debug.Log("object : " + close_gameobject.transform.position);
+        Debug.Log("mouse : " + point);
+
+        foreach (GameObject my_hand in Myhand)
+        {
+            if (close_gameobject == my_hand)
+            {
+                my_hand.GetComponent<UI_handMove>().close_point = true;
+            }
+            else
+            {
+                my_hand.GetComponent<UI_handMove>().close_point = false;
+            }
+        }
+
     }
 
 
