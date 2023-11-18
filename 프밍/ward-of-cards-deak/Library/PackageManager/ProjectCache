@@ -13,14 +13,14 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638353953041662689
-    m_Hash: 1466475193
+      ticks: 638358335275167126
+    m_Hash: 3987418482
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: "C:/Github/War_of_Card/\uD504\uBC0D/ward-of-cards-deak/Packages"
-m_EditorVersion: 2023.1.17f1 (b84c4024cd38)
+m_EditorVersion: 2022.3.13f1 (5f90a5ebde0f)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.1.0
   testable: 0
@@ -115,9 +115,8 @@ m_ResolvedPackages:
     - 2.1.0
     - 2.2.0
     compatible:
-    - 2.1.0
     - 2.2.0
-    recommended: 2.1.0
+    recommended: 2.2.0
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -145,8 +144,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638301329890000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.1/manual/index.html
@@ -157,39 +154,19 @@ m_ResolvedPackages:
     revision: 179e96acc2f95fcb9dcc91b5fb2ee5f3e85d48aa
     path: 
   unityLifecycle:
-    version: 2.1.0
+    version: 2.2.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"Unity Version Control is now available as part of the
-    Version Control Package! You can enable Unity Version Control via Window > Unity
-    Version Control to get started!\nIf you have previously used the Unity Asset
-    Store Plastic SCM plug-in, you can now simply use this package. Make sure you
-    delete the plug-in from your project.\nRemoving a previously added Plastic SCM
-    Asset Store Plug-In:\n\n- Select the PlasticSCM folder in the Assets\\Plugins
-    folder on the Project tab, then click Edit > Delete\n- Close the Unity Editor
-    and open your project again. You will find the Plastic SCM menu item in the Window
-    menu.\n\nChanged:\n\n- Moved the button to invite users to the organization from
-    the submenu to the toolbar.\n- Show a message with a link to invite users to
-    the organization after the first checkin.\n- Don''t write cloudProjectId in ProjectSettings.asset
-    anymore since it should only be managed by Services.\n- Added command to support
-    Hub creating a new project, and connecting a project to Unity Version Control.\n\nFixed:\n\n-
-    Fixed Add to ignored/hidden changes list from the Project window creating a negative
-    rule.\n- Fixed Switch to changeset not working on Gluon partial workspace."}'
-  assetStore:
-    productId: 
-- packageId: com.unity.feature.development@1.0.2
+- packageId: com.unity.feature.development@1.0.1
   testable: 0
   isDirectDependency: 1
-  version: 1.0.2
+  version: 1.0.1
   source: 2
-  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.feature.development@1.0.2"
+  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.feature.development@1.0.1"
   assetPath: Packages/com.unity.feature.development
   name: com.unity.feature.development
   displayName: Engineering
@@ -207,15 +184,17 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.0.2
+    - 1.0.1
     compatible:
-    - 1.0.2
-    recommended: 1.0.2
+    - 1.0.1
+    recommended: 1.0.1
     deprecated: []
   dependencies:
   - name: com.unity.ide.visualstudio
     version: default
   - name: com.unity.ide.rider
+    version: default
+  - name: com.unity.ide.vscode
     version: default
   - name: com.unity.editorcoroutines
     version: default
@@ -227,17 +206,19 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.ide.visualstudio
-    version: 2.0.21
+    version: 2.0.22
   - name: com.unity.test-framework
-    version: 1.3.9
+    version: 1.1.33
   - name: com.unity.ext.nunit
-    version: 2.0.3
+    version: 1.0.6
   - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.ide.rider
-    version: 3.0.25
+    version: 3.0.26
+  - name: com.unity.ide.vscode
+    version: 1.2.5
   - name: com.unity.editorcoroutines
     version: 1.0.0
   - name: com.unity.performance.profile-analyzer
@@ -256,8 +237,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -268,19 +247,13 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 1.0.2
+    version: 1.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"quickstart":"https://docs.unity3d.com/2021.2/Documentation/Manual/DeveloperToolsFeature.html"}'
-  assetStore:
-    productId: 
 - packageId: com.unity.textmeshpro@3.0.6
   testable: 0
   isDirectDependency: 1
@@ -445,8 +418,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 637547111200000000
   documentationUrl: 
@@ -464,12 +435,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.timeline@1.8.2
   testable: 0
   isDirectDependency: 1
@@ -577,12 +542,15 @@ m_ResolvedPackages:
     - 1.8.5
     - 1.8.6
     compatible:
+    - 1.7.6
+    - 1.8.0
+    - 1.8.1
     - 1.8.2
     - 1.8.3
     - 1.8.4
     - 1.8.5
     - 1.8.6
-    recommended: 1.8.6
+    recommended: 1.7.6
     deprecated: []
   dependencies:
   - name: com.unity.modules.director
@@ -617,8 +585,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638143790900000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.timeline@1.8/manual/index.html
@@ -629,21 +595,13 @@ m_ResolvedPackages:
     revision: a60d9f471eee76056ecbc8c94f5bec263478a9c0
     path: 
   unityLifecycle:
-    version: 1.8.2
+    version: 1.7.6
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### Fixed\n\n- Fixed issue where previewing the Timeline
-    would create prefab property modifications\n- Fixed issue where `ClipEditor.OnClipChanged`
-    was not invoked when changing the object assigned to a `ExposedReference<UnityEngine.Object>`."}'
-  assetStore:
-    productId: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -698,8 +656,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -717,12 +673,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.visualscripting@1.8.0
   testable: 0
   isDirectDependency: 1
@@ -774,10 +724,8 @@ m_ResolvedPackages:
     - 1.9.0
     - 1.9.1
     compatible:
-    - 1.8.0
-    - 1.9.0
     - 1.9.1
-    recommended: 1.8.0
+    recommended: 1.9.1
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -804,8 +752,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638060044680000000
   documentationUrl: 
@@ -816,19 +762,13 @@ m_ResolvedPackages:
     revision: 0de66378b19e990494d98f39ecc2b6aa5ac65351
     path: 
   unityLifecycle:
-    version: 1.8.0
+    version: 1.9.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -867,8 +807,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -886,12 +824,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.androidjni@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -929,8 +861,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -948,12 +878,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.animation@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -992,8 +916,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1011,12 +933,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.assetbundle@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1055,8 +971,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1074,12 +988,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.audio@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1118,8 +1026,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1137,12 +1043,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.cloth@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1185,8 +1085,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1204,12 +1102,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.director@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1256,8 +1148,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1275,12 +1165,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.imageconversion@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1297,7 +1181,8 @@ m_ResolvedPackages:
   category: 
   type: module
   description: 'The ImageConversion module implements the ImageConversion class which
-    provides helper methods for converting image data. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ImageConversionModule.html'
+    provides helper methods to convert images from and to PNG, JPEG or EXR formats.
+    Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ImageConversionModule.html'
   status: 0
   errors: []
   versions:
@@ -1319,8 +1204,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1338,12 +1221,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.imgui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1382,8 +1259,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1401,12 +1276,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.jsonserialize@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1445,8 +1314,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1464,12 +1331,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.particlesystem@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1508,8 +1369,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1527,12 +1386,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.physics@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1571,8 +1424,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1590,12 +1441,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.physics2d@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1634,8 +1479,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1653,12 +1496,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.screencapture@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1701,8 +1538,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1720,12 +1555,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.terrain@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1764,8 +1593,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1783,12 +1610,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.terrainphysics@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1835,8 +1656,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1854,12 +1673,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.tilemap@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1901,8 +1714,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1920,12 +1731,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.ui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1964,8 +1769,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -1983,12 +1786,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.uielements@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2039,8 +1836,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2058,12 +1853,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.umbra@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2102,8 +1891,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2121,12 +1908,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.unityanalytics@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2173,8 +1954,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2192,12 +1971,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.unitywebrequest@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2236,8 +2009,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2255,12 +2026,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.unitywebrequestassetbundle@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2307,8 +2072,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2326,12 +2089,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.unitywebrequestaudio@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2378,8 +2135,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2397,12 +2152,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.unitywebrequesttexture@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2449,8 +2198,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2468,12 +2215,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.unitywebrequestwww@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2536,8 +2277,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2555,12 +2294,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.vehicles@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2603,8 +2336,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2622,12 +2353,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.video@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2678,8 +2403,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2697,12 +2420,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.vr@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2755,8 +2472,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2774,12 +2489,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.wind@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2818,8 +2527,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2837,12 +2544,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.xr@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -2893,8 +2594,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2912,12 +2611,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.modules.subsystems@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -2960,8 +2653,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 0
   documentationUrl: 
@@ -2979,18 +2670,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-- packageId: com.unity.ide.visualstudio@2.0.21
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 0
-  version: 2.0.21
+  version: 2.0.22
   source: 1
-  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.21"
+  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.22"
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -3032,7 +2717,6 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     compatible:
-    - 2.0.21
     - 2.0.22
     recommended: 2.0.22
     deprecated: []
@@ -3041,9 +2725,9 @@ m_ResolvedPackages:
     version: 1.1.9
   resolvedDependencies:
   - name: com.unity.test-framework
-    version: 1.3.9
+    version: 1.1.33
   - name: com.unity.ext.nunit
-    version: 2.0.3
+    version: 1.0.6
   - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
@@ -3058,44 +2742,29 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638300315250000000
+  datePublishedTicks: 638326061910000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: eb2b500b99f6429d3d9dcb8acbcbd366dfbb42be
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
-    version: 2.0.21
+    version: 2.0.22
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"Integration:\n\n- Only disable the legacy `com.unity.ide.vscode`
-    package going forward.\n- Fix json parsing issues with specific non-UTF code
-    pages.\n\nProject generation:\n\n- Target `netstandard2.1` instead of `netstandard2.0`.\n-
-    Set `defaultSolution` in `settings.json`.\n- Remove `files.exclude` entries for
-    root `csproj` and `sln` files in `settings.json` when needed.\n- Add `vstuc`
-    launch configuration to `launch.json` when needed.\n- Add `visualstudiotoolsforunity.vstuc`
-    entry to `extensions.json` when needed.\n- You can prevent the package from patching
-    those configuration files by creating a `.vscode/.vstupatchdisable` file."}'
-  assetStore:
-    productId: 
-- packageId: com.unity.ide.rider@3.0.25
+- packageId: com.unity.ide.rider@3.0.26
   testable: 0
   isDirectDependency: 0
-  version: 3.0.25
+  version: 3.0.26
   source: 1
-  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ide.rider@3.0.25"
+  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ide.rider@3.0.26"
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -3153,7 +2822,6 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     compatible:
-    - 3.0.25
     - 3.0.26
     recommended: 3.0.26
     deprecated: []
@@ -3162,7 +2830,7 @@ m_ResolvedPackages:
     version: 1.0.6
   resolvedDependencies:
   - name: com.unity.ext.nunit
-    version: 2.0.3
+    version: 1.0.6
   keywords: []
   registry:
     id: main
@@ -3173,32 +2841,91 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638300315270000000
+  datePublishedTicks: 638326061920000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: e103b4771a884e656407e1b7219e5e3c20222552
+    revision: 2b29b1152946c13d1ecebf6fc681a59cd8b4d399
     path: 
   unityLifecycle:
-    version: 3.0.25
+    version: 3.0.26
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"- unification of functionality to  search JetBrains
-    installations and open solution and file in Rider"}'
-  assetStore:
-    productId: 
+- packageId: com.unity.ide.vscode@1.2.5
+  testable: 0
+  isDirectDependency: 0
+  version: 1.2.5
+  source: 1
+  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ide.vscode@1.2.5"
+  assetPath: Packages/com.unity.ide.vscode
+  name: com.unity.ide.vscode
+  displayName: Visual Studio Code Editor
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Code editor integration for supporting Visual Studio Code as code
+    editor for unity. Adds support for generating csproj files for intellisense purposes,
+    auto discovery of installations, etc.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.2
+    - 1.0.3
+    - 1.0.7
+    - 1.1.0
+    - 1.1.2
+    - 1.1.3
+    - 1.1.4
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 1.2.4
+    - 1.2.5
+    compatible:
+    - 1.2.5
+    recommended: 1.2.5
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637800255360000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
+    revision: b0740c80bfc2440527c317109f7c3d9100132722
+    path: 
+  unityLifecycle:
+    version: 1.2.5
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.editorcoroutines@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -3247,8 +2974,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 637232611380000000
   documentationUrl: 
@@ -3266,12 +2991,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
 - packageId: com.unity.performance.profile-analyzer@1.2.2
   testable: 0
   isDirectDependency: 0
@@ -3326,8 +3045,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638108624620000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.performance.profile-analyzer@1.2/manual/index.html
@@ -3345,19 +3062,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### Fixed\n\n* Fixed exception thrown when removing
-    marker."}'
-  assetStore:
-    productId: 
-- packageId: com.unity.test-framework@1.3.9
+- packageId: com.unity.test-framework@1.1.33
   testable: 0
   isDirectDependency: 0
-  version: 1.3.9
+  version: 1.1.33
   source: 1
-  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.test-framework@1.3.9"
+  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.test-framework@1.1.33"
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -3366,7 +3076,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Unity Test Framework
-  type: assets
+  type: asset
   description: Test framework for running Edit mode and Play mode tests in Unity.
   status: 0
   errors: []
@@ -3415,28 +3125,39 @@ m_ResolvedPackages:
     - 1.3.7
     - 1.3.8
     - 1.3.9
+    - 1.4.0
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     compatible:
+    - 1.1.33
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.3.5
+    - 1.3.7
+    - 1.3.8
     - 1.3.9
+    - 1.4.0
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
     - 2.0.1-pre.18
-    recommended: 1.3.9
+    recommended: 1.1.33
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
-    version: 2.0.3
+    version: 1.0.6
   - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.ext.nunit
-    version: 2.0.3
+    version: 1.0.6
   - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
@@ -3453,37 +3174,23 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638283169810000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/index.html
+  datePublishedTicks: 637938212700000000
+  documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.test-framework.git
-    revision: 5c8a1448cee4d7607be0d60dceb66703b0cfe016
+    revision: 34a4d423d64926635eb36d3bb86276179cc186e1
     path: 
   unityLifecycle:
-    version: 1.3.9
+    version: 1.1.33
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"- By using the editor command line new argument `-randomOrderSeed
-    x` you can run the tests in a randomized order, where x is an integer different
-    from 0. If a new test is added in the project the random order passing the same
-    seed will be kept, and the new test will be placed in the random list accordigly.\n-
-    Fix for WebGL platform target to close the browser tab when the run is completed.
-    \n- Added TestFileReferences.json to be generated on build step of the player,
-    so can be consumed later by Test runners to enrich data for run part."}'
-  assetStore:
-    productId: 
 - packageId: com.unity.testtools.codecoverage@1.2.4
   testable: 0
   isDirectDependency: 0
@@ -3548,9 +3255,9 @@ m_ResolvedPackages:
     version: 1.0.1
   resolvedDependencies:
   - name: com.unity.test-framework
-    version: 1.3.9
+    version: 1.1.33
   - name: com.unity.ext.nunit
-    version: 2.0.3
+    version: 1.0.6
   - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
@@ -3571,8 +3278,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 638212235100000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/index.html
@@ -3590,17 +3295,6 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### Fixes\n- Fixed failing to gather code coverage
-    for normal methods in generic classes (case [COV-27](https://issuetracker.unity3d.com/issues/non-generic-methods-in-generic-classes-always-show-no-coverage)).\n-
-    Documentation: Corrected *Settings.json* path in `useProjectSettings` section
-    in *-coverageOptions* (case [COV-26](https://issuetracker.unity3d.com/issues/documentation-for-useprojectsettings-references-incorrect-settings-dot-json-path)).\n-
-    Make sure *Auto Generate Report* defaults to true when running from the command
-    line (case [COV-25](https://issuetracker.unity3d.com/issues/useprojectsettings-does-not-generate-report-until-auto-generate-report-is-toggled-off-and-on-again))."}'
-  assetStore:
-    productId: 
 - packageId: com.unity.settings-manager@2.0.1
   testable: 0
   isDirectDependency: 0
@@ -3646,8 +3340,6 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
   datePublishedTicks: 637744099390000000
   documentationUrl: 
@@ -3665,18 +3357,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-- packageId: com.unity.ext.nunit@2.0.3
+- packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
-  version: 2.0.3
+  version: 1.0.6
   source: 1
-  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ext.nunit@2.0.3"
+  resolvedPath: "C:\\Github\\War_of_Card\\\uD504\uBC0D\\ward-of-cards-deak\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6"
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -3686,8 +3372,8 @@ m_ResolvedPackages:
     url: 
   category: Libraries
   type: asset
-  description: A custom version of NUnit used by Unity Test Framework. Based on NUnit
-    version 3.5 and works with all platforms, il2cpp and Mono AOT.
+  description: Custom version of the nunit package build to work with Unity. Used
+    by the Unity Test Framework.
   status: 0
   errors: []
   versions:
@@ -3703,10 +3389,12 @@ m_ResolvedPackages:
     - 2.0.4
     - 2.0.5
     compatible:
+    - 1.0.6
+    - 2.0.2
     - 2.0.3
     - 2.0.4
     - 2.0.5
-    recommended: 2.0.5
+    recommended: 1.0.6
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -3723,30 +3411,20 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  entitlements:
-    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637920402200000000
+  datePublishedTicks: 637429759280000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
-    revision: 2e41147762790f2a221103bff840a0138ca01b57
+    revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
     path: 
   unityLifecycle:
-    version: 2.0.3
+    version: 1.0.6
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"- Added unique test ID for repeated tests\r\n- Added
-    ContainKey and ContainValue constaints for dictionaries\r\n- Fixed unexpected
-    null exception when using EmptyConstraint with a null object"}'
-  assetStore:
-    productId: 

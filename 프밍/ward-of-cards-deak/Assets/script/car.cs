@@ -12,6 +12,12 @@ public class car : MonoBehaviour
     private Material backSprite;
     private bool isFlipped=false;
     private bool isFlipping = false;
+    public int cardID;
+    public void setCardID(int id)
+    {
+        cardID = id;
+
+    }
 
     public void SetanimalSprite(Material sprite)
     {

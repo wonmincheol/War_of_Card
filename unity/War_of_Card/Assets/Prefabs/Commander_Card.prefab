@@ -369,9 +369,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4707893393184958229}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Commander_Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,9 +771,9 @@ GameObject:
   - component: {fileID: 3456208980741424027}
   - component: {fileID: 8141167496331878261}
   - component: {fileID: 5617288199907850542}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Back_image
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

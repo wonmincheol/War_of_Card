@@ -178,7 +178,7 @@ public class UI_manager : MonoBehaviour
 
         obj.transform.parent = this.transform;
 
-        obj.transform.localPosition = new Vector3(0, 0, -120);
+        obj.transform.localPosition = new Vector3(0, 0, 0);
         // obj.transform.position=new Vector3(0,0,-120);
         obj.transform.localRotation = Quaternion.identity;
         // obj.transform.rotation = Quaternion.identity;
