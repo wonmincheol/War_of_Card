@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class DrawCard : MonoBehaviour
 {
-    public GameObject cardDeck; // CardDeck으로 묶은 부모 오브젝트를 인스펙터에서 할당해주세요.
-    public GameObject cardPrefab; // Card 프리팹을 인스펙터에서 할당해주세요.
+    public GameObject cardDeck;
+    public GameObject cardPrefab;
 
     void Update()
     {
@@ -39,7 +39,6 @@ public class DrawCard : MonoBehaviour
 
             newCard.transform.position = newPosition;
 
-            // 회전과 크기 적용
             newCard.transform.rotation = Quaternion.Euler(0, 180, 0);
             newCard.transform.localScale = new Vector3(8f, 2f, 14f);
         }
