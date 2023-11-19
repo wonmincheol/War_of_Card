@@ -19,21 +19,21 @@ public class DrawCard : MonoBehaviour
 
         if (cards.Length > 1)
         {
-            // ·£´ıÇÑ ÀÎµ¦½º ¼±ÅÃ
+            // ëœë¤í•œ ì¸ë±ìŠ¤ ì„ íƒ
             int randomIndex = Random.Range(1, cards.Length);
 
-            // ¼±ÅÃµÈ Card ÇÁ¸®ÆÕÀ» º¹Á¦ÇÏ¿© »õ·Î¿î ¿ÀºêÁ§Æ® »ı¼º
+            // ì„ íƒëœ Card í”„ë¦¬íŒ¹ì„ ë³µì œí•˜ì—¬ ìƒˆë¡œìš´ ì˜¤ë¸Œì íŠ¸ ìƒì„±
             GameObject newCard = Instantiate(cardPrefab);
 
-            Vector3 newPosition = new Vector3(67f, 34f, -19f); // ¿À¸¥ÂÊ ÇÏ´Ü
+            Vector3 newPosition = new Vector3(67f, 34f, -19f); // ì˜¤ë¥¸ìª½ í•˜ë‹¨
 
-            // ÃÖ´ë 5¹ø ½ÃµµÇÏ¿© °ãÄ¡Áö ¾Ê´Â À§Ä¡ Ã£±â
+            // ìµœëŒ€ 5ë²ˆ ì‹œë„í•˜ì—¬ ê²¹ì¹˜ì§€ ì•ŠëŠ” ìœ„ì¹˜ ì°¾ê¸°
             int maxAttempts = 5;
             int attempts = 0;
 
             while (CheckOverlap(newPosition, 1.0f) && attempts < maxAttempts)
             {
-                newPosition.x -= 10f; // ¿ŞÂÊÀ¸·Î 10 ´ÜÀ§ ÀÌµ¿
+                newPosition.x -= 10f; // ì™¼ìª½ìœ¼ë¡œ 10 ë‹¨ìœ„ ì´ë™
                 attempts++;
             }
 
@@ -44,10 +44,10 @@ public class DrawCard : MonoBehaviour
         }
     }
 
-    // ÁÖ¾îÁø À§Ä¡ ÁÖº¯¿¡ ´Ù¸¥ Ä«µå°¡ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
+    // ì£¼ì–´ì§„ ìœ„ì¹˜ ì£¼ë³€ì— ë‹¤ë¥¸ ì¹´ë“œê°€ ìˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
     bool CheckOverlap(Vector3 position, float radius)
     {
-        Collider[] hitColliders = Physics.OverlapSphere(position, radius); // ¹İÁö¸§ radiusÀÇ ±¸¸¦ »ç¿ëÇÏ¿© Ãæµ¹ Ã¼Å©
+        Collider[] hitColliders = Physics.OverlapSphere(position, radius); // ë°˜ì§€ë¦„ radiusì˜ êµ¬ë¥¼ ì‚¬ìš©í•˜ì—¬ ì¶©ëŒ ì²´í¬
 
         return hitColliders.Length > 0;
     }

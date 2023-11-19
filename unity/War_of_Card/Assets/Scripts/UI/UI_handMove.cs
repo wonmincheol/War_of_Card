@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TreeEditor;
 using UnityEngine;
 
 public class UI_handMove : MonoBehaviour
 {
+
+
     public Vector3 myPos = Vector3.zero;
     public Boolean close_point = false;
     Vector3 defaultVector;
@@ -14,16 +17,21 @@ public class UI_handMove : MonoBehaviour
 
 
     private Vector3 normalSize;
-
+    private Camera camera;
+    private Camera Main_camera;
+    private float default_Z;
     State state;
 
     // Start is called before the first frame update
     void Start()
     {
+        camera = GameObject.Find("UI Camera").GetComponent<Camera>();
+        Main_camera = GameObject.Find("Main Camera").GetComponent<Camera>();
         defaultVector = new Vector3(0, 0, -120);
         transform.localPosition = defaultVector;
         state = State.hand;
         normalSize = transform.localScale;
+        default_Z = transform.localPosition.z;
     }
 
     // Update is called once per frame
@@ -31,6 +39,7 @@ public class UI_handMove : MonoBehaviour
     {
         size_apliy();
         toHand();
+        click_check();
     }
 
     void toHand()
@@ -44,16 +53,72 @@ public class UI_handMove : MonoBehaviour
     void size_apliy()
     {
 
-        if (close_point == true)
+        if (state == State.hand)
         {
-            transform.localScale = normalSize * 1.1f;
+            if (close_point == true)
+            {
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, default_Z - 10);
+                transform.localScale = normalSize * 1.1f;
+            }
+            else
+            {
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, default_Z);
+
+                transform.localScale = normalSize;
+            }
+        }
+    }
+
+    void click_check()
+    {
+        if ((Input.GetMouseButton(0) == true) && (close_point == true))
+        {
+            state = State.follow;
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            Vector3 point = new Vector3(0, 0, 0);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                point = hit.point;
+                // UnityEngine.Debug.Log("Test : " + point);
+                transform.position = Vector3.Lerp(this.transform.position, new Vector3(point.x, point.y, transform.position.z), 0.2f);
+            }
         }
         else
         {
-            transform.localScale = normalSize;
+            state = State.hand;
+        }
+
+        if ((Input.GetMouseButtonUp(0) == true) && (close_point == true))
+        {
+            if ((transform.localPosition.y) > 0)
+            {
+                UnityEngine.Debug.Log("Use Card");
+                DestoryThis();
+            }
+        }
+    }
+
+    void DestoryThis()
+    {
+        GameObject hand = this.transform.parent.gameObject;
+        UI_hand ui_Hand = hand.GetComponent<UI_hand>();
+        foreach (GameObject now in ui_Hand.Myhand)
+        {
+            if (now == this.gameObject)
+            {
+                ui_Hand.Myhand.Remove(now);
+                ui_Hand.count--;
+                ui_Hand.hand_position();
+
+                Destroy(this.gameObject);
+                return;
+            }
         }
 
 
     }
+
 
 }

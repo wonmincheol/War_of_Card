@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,10 +39,17 @@ public class UI_hand : MonoBehaviour
             Draw();
             hand_position();
         }
-        Select_card();
+        try
+        {
+            Select_card();
+        }
+        catch (ObjectDisposedException e)
+        {
+            Debug.Log(e);
+        }
     }
 
-    void hand_position()
+    public void hand_position()
     {
         // position gen
         List<float> pos = new List<float>();
@@ -86,7 +94,7 @@ public class UI_hand : MonoBehaviour
     {
 
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-        Vector3 point = new Vector2(0, 0);
+        Vector3 point = new Vector3(0, 0, 0);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
@@ -98,39 +106,54 @@ public class UI_hand : MonoBehaviour
             }
             else
             {
+                foreach (GameObject my_hand in Myhand)
+                {
+                    my_hand.GetComponent<UI_handMove>().close_point = false;
+                }
                 return;
+
             }
         }
         else
         {
+            foreach (GameObject my_hand in Myhand)
+            {
+                my_hand.GetComponent<UI_handMove>().close_point = false;
+            }
             return;
         }
 
-        float length_min = float.MaxValue;
+        float length_min = 30;
         GameObject close_gameobject = null;
         foreach (GameObject my_hand in Myhand)
         {
             float now_length = ((my_hand.transform.position) - point).magnitude;
+            // Debug.Log("len : " + now_length);
             if (now_length < length_min)
             {
                 length_min = now_length;
                 close_gameobject = my_hand;
             }
         }
-        Debug.Log("object : " + close_gameobject.transform.position);
-        Debug.Log("mouse : " + point);
+        // Debug.Log("object : " + close_gameobject.transform.position);
+        // Debug.Log("mouse : " + point);
 
+
+        List<Boolean> test = new List<Boolean>();
         foreach (GameObject my_hand in Myhand)
         {
             if (close_gameobject == my_hand)
             {
                 my_hand.GetComponent<UI_handMove>().close_point = true;
+                test.Add(true);
             }
             else
             {
                 my_hand.GetComponent<UI_handMove>().close_point = false;
+                test.Add(false);
             }
         }
+        // Debug.Log(string.Join(",", test));
 
     }
 
