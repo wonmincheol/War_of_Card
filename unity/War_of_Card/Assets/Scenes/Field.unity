@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1837,6 +1837,7 @@ GameObject:
   - component: {fileID: 777570513}
   - component: {fileID: 777570512}
   - component: {fileID: 777570511}
+  - component: {fileID: 777570515}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -1930,6 +1931,18 @@ Transform:
   m_Father: {fileID: 1719529052}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &777570515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777570510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f7a0a1a921bc749b9661c2561db381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &845981432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,6 +4283,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
+--- !u!1 &1591532432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591532434}
+  - component: {fileID: 1591532433}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1591532433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591532432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31690277aa55c0443aff0123e5802ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataForms:
+  - dataList:
+    - {fileID: 11400000, guid: 113545107f1757c458c887cbbab40334, type: 2}
+  commander_DataList: []
+  unit_DataList: []
+  magic_DataList: []
+  buff_manager: []
+--- !u!4 &1591532434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591532432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636776034
 GameObject:
   m_ObjectHideFlags: 0
