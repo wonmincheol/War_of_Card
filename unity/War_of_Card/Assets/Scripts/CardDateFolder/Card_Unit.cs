@@ -14,7 +14,7 @@ public class Card_Unit : MonoBehaviour
         Debug.Log(this.card_date.card_Name);
     }
 
-    private void set_Date(int id)
+    public void set_Date(int id)
     {
         data_Arr = GameObject.Find("GameManager");
         card_date.card_Type = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].card_Type;

@@ -82,7 +82,7 @@ public class UI_handMove : MonoBehaviour
             {
                 point = hit.point;
                 // UnityEngine.Debug.Log("Test : " + point);
-                transform.position = Vector3.Lerp(this.transform.position, new Vector3(point.x, point.y, transform.position.z), 0.2f);
+                transform.position = Vector3.Lerp(this.transform.position, new Vector3(point.x, point.y, transform.position.z), 0.5f);
             }
         }
         else

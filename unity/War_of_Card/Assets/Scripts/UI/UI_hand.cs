@@ -167,6 +167,7 @@ public class UI_hand : MonoBehaviour
 
         GameObject obj = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
         GameObject gameObject;
+        obj.gameObject.transform.localScale = this.transform.localScale * 5;
         for (int i = 0; i < obj.transform.childCount; i++)
         {
             if (obj.transform.GetChild(i).name == "Name")
@@ -201,6 +202,9 @@ public class UI_hand : MonoBehaviour
         obj.transform.localRotation = Quaternion.identity;
         obj.transform.localPosition = new Vector3(0, 0, -120);
         obj.AddComponent<UI_handMove>();
+        obj.AddComponent<Card_Unit>();
+        //id 수정 필요
+        obj.AddComponent<Card_Unit>().set_Date(1001);
 
         Myhand.Add(obj);
         count++;
