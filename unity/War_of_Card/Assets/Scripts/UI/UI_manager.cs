@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
 
-enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY };
+enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY, CARD };
 
 public class UI_manager : MonoBehaviour
 {
@@ -62,19 +64,39 @@ public class UI_manager : MonoBehaviour
     {
 
         // 좌클릭
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             GameObject hitObject;
 
 
-
+            //default
             RaycastHit hit;
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+            //canvas
+            GraphicRaycaster graphicRaycaster = this.GetComponent<GraphicRaycaster>();
+            PointerEventData pointerEventData = new PointerEventData(null);
+            pointerEventData.position = Input.mousePosition;
+            List<RaycastResult> result = new List<RaycastResult>();
+            graphicRaycaster.Raycast(pointerEventData, result);
+
+
+
             //카메라에서 발사한 레이저 히트시
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit) || (result.Count > 0))
             {
                 // Debug.Log(hit.transform.gameObject.name);
                 hitObject = hit.transform.gameObject;
+
+                if (hitObject != null)
+                {
+                    Debug.Log("hit : " + hitObject.name);
+                }
+                if (result.Count > 0)
+                {
+                    Debug.Log("hit_UI : " + result[0].gameObject.name);
+                }
+
                 // if조건에 알맞는 오브젝트 
                 State state = State.UNIT;
                 //Commander
@@ -103,9 +125,13 @@ public class UI_manager : MonoBehaviour
                     state = State.GY;
                 }
                 //Card
-                else
+                else if (hitObject.tag == "UNIT")
                 {
                     state = State.UNIT;
+                }
+                else if ((result.Count > 0) && result[0].gameObject.tag == "Card")
+                {
+                    state = State.CARD;
                 }
 
 
@@ -119,6 +145,18 @@ public class UI_manager : MonoBehaviour
                     case State.PLCAE:
                         break;
                     case State.DECK:
+                        UI_hand ui_hand = null;
+                        for (int i = 0; i < this.transform.childCount; i++)
+                        {
+                            if (this.transform.GetChild(i).GetComponent<UI_hand>() != null)
+                            {
+                                ui_hand = this.transform.GetChild(i).GetComponent<UI_hand>();
+                            }
+                        }
+                        if (ui_hand != null)
+                        {
+                            ui_hand.Draw();
+                        }
                         break;
                     case State.GY:
                         break;
@@ -140,6 +178,8 @@ public class UI_manager : MonoBehaviour
                                 }
                             }
                         }
+                        break;
+                    case State.CARD:
                         break;
                     default:
                         break;

@@ -37,7 +37,7 @@ public class UI_hand : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             Draw();
-            hand_position();
+
         }
         try
         {
@@ -78,6 +78,34 @@ public class UI_hand : MonoBehaviour
 
         pos.Sort();
 
+        float card_padding_z = 300;
+        // position gen
+        List<float> pos_z = new List<float>();
+
+        if ((count % 2) == 0)
+        {
+            int c = count / 2;
+            for (int i = 0; i < c; i++)
+            {
+                float n = i * card_padding_z + card_padding_z / 2;
+                pos_z.Add(n);
+                pos_z.Add(-n);
+            }
+        }
+        else
+        {
+            pos_z.Add(0);
+            int c = (count - 1) / 2;
+            for (int i = 0; i < c; i++)
+            {
+                float n = i * card_padding_z + card_padding_z;
+                pos_z.Add(n);
+                pos_z.Add(-n);
+            }
+        }
+
+        pos_z.Sort();
+
         // Debug.Log(string.Join(",", pos));
 
 
@@ -85,7 +113,7 @@ public class UI_hand : MonoBehaviour
         //pos adapt
         for (int i = 0; i < Myhand.Count; i++)
         {
-            Myhand[i].GetComponent<UI_handMove>().myPos = new Vector3(pos[i], -150, -120);
+            Myhand[i].GetComponent<UI_handMove>().myPos = new Vector3(pos[i], -150, -120 + pos_z[i]);
         }
     }
 
@@ -158,7 +186,7 @@ public class UI_hand : MonoBehaviour
     }
 
 
-    void Draw(/*int id*/)
+    public void Draw(/*int id*/)
     {
         if (count == Max_hand)
         {
@@ -167,7 +195,7 @@ public class UI_hand : MonoBehaviour
 
         GameObject obj = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
         GameObject gameObject;
-        obj.gameObject.transform.localScale = this.transform.localScale * 5;
+        obj.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * 5, this.gameObject.transform.localScale.y * 5, this.gameObject.transform.localScale.z);
         for (int i = 0; i < obj.transform.childCount; i++)
         {
             if (obj.transform.GetChild(i).name == "Name")
@@ -209,7 +237,7 @@ public class UI_hand : MonoBehaviour
         Myhand.Add(obj);
         count++;
 
-
+        hand_position();
 
 
     }
