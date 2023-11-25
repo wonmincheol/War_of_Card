@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -20,20 +21,32 @@ public class UI_manager : MonoBehaviour
     // 임시로 카드 데이터 public 으로 받아옴
     public GameObject card;
 
+    //cost
+    public int Cost;
     //카드 올라갈 공간
     GameObject summonObject = null;
+
+    //코스트 자식 오브젝트
+    GameObject Cost_object = null;
     // Start is called before the first frame update
+
+    public List<GameObject> Cost_List = new List<GameObject>();
     void Start()
     {
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
 
-        //카드 올라갈 공간 지정
+
         for (int j = 0; j < this.transform.childCount; j++)
         {
+            //카드 올라갈 공간 지정
             if (this.transform.GetChild(j).name == "CardHint")
             {
                 summonObject = this.transform.GetChild(j).gameObject;
+            }
+            else if (this.transform.GetChild(j).name == "Cost_Area")
+            {
+                Cost_object = this.transform.GetChild(j).gameObject;
             }
         }
     }
@@ -43,6 +56,7 @@ public class UI_manager : MonoBehaviour
     {
         MouseKeyDown_object();
         MouseKeyUp_object();
+        Apply_Cost();
     }
 
 
@@ -226,6 +240,30 @@ public class UI_manager : MonoBehaviour
         // obj.transform.localScale = new Vector3(1,1,1);
 
         return obj;
+    }
+
+
+
+
+
+    public void Apply_Cost()
+    {
+        for (int i = 1; i <= Cost_List.Count; i++)
+        {
+            if (i <= Cost)
+            {
+                Cost_List[i - 1].SetActive(true);
+            }
+            else
+            {
+                Cost_List[i - 1].SetActive(false);
+            }
+        }
+
+
+
+
+
     }
 
 }
