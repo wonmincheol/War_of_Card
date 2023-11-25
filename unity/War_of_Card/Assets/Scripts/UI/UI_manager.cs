@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 
 
-enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY, CARD };
+enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY, CARD, NULL };
 
 public class UI_manager : MonoBehaviour
 {
@@ -98,7 +98,7 @@ public class UI_manager : MonoBehaviour
                 }
 
                 // if조건에 알맞는 오브젝트 
-                State state = State.UNIT;
+                State state = State.NULL;
                 //Commander
                 if (hitObject.tag == "COMMANDER")
                 {

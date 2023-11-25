@@ -63,7 +63,6 @@ public class UI_handMove : MonoBehaviour
             else
             {
                 transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, default_Z);
-
                 transform.localScale = normalSize;
             }
         }
