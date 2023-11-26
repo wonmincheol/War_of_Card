@@ -6,17 +6,19 @@ public class Card_Unit : MonoBehaviour
 {
     GameObject data_Arr;
     Unit_Card card_date;
+
+
+
     // Start is called before the first frame update
     void Awake()
     {
         card_date = new Unit_Card();
-        set_Data(1001);
-        update_Data_AllText();
     }
 
     public void set_Data(int id)
     {
         data_Arr = GameObject.Find("GameManager");
+        Debug.Log("set_data : " + id);
         card_date.card_Type = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].card_Type;
         card_date.card_Name = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].card_Name;
         card_date.card_Cost = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].card_Cost;
@@ -25,8 +27,9 @@ public class Card_Unit : MonoBehaviour
         card_date.max_HP = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].max_HP;
         card_date.now_HP = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].max_HP;
         card_date.damage = data_Arr.GetComponent<GameManager>().dataForms[(id / 1000) - 1].dataList[id % 1000 - 1].damage;
+        update_Data_AllText();
     }
-    public void update_Data_AllText() // ¸ðµç ÅØ½ºÆ® Àû¿ë ÇÔ¼ö ¹Ø¿¡´Â ÀÌ¸§ ±×´ë·Î ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
+    public void update_Data_AllText() // ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½Ø¿ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½×´ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     {
         update_Data_NameText();
         update_Data_DescriptionText();
@@ -54,7 +57,7 @@ public class Card_Unit : MonoBehaviour
     {
         transform.GetChild(1).GetChild(7).GetChild(0).GetComponent<TextMeshPro>().text = card_date.card_Cost.ToString();
     }
-    /* ÇöÀç ÀÌµ¿ ¹Ì±¸Çö
+    /* ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½Ì±ï¿½ï¿½ï¿½
     public void update_Data_MovingText()
     {
         transform.GetChild(1).GetChild(8).GetChild(0).GetComponent<TextMeshPro>().text = card_date.;

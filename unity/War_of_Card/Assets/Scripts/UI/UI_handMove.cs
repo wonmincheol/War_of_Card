@@ -46,7 +46,7 @@ public class UI_handMove : MonoBehaviour
     {
         if (myPos != Vector3.zero && state == State.hand)
         {
-            transform.localPosition = Vector3.Lerp(this.transform.localPosition, myPos, 0.007f);
+            transform.localPosition = Vector3.Lerp(this.transform.localPosition, myPos, 0.035f);
         }
     }
 

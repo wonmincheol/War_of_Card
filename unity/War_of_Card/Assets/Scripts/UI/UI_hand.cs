@@ -9,7 +9,13 @@ using UnityEngine;
 public class UI_hand : MonoBehaviour
 {
     //Temp : Card_generate develop
-    public GameObject card;
+    public GameObject unit_card;
+    public GameObject commander_card;
+    public GameObject Magic_card;
+    public GameObject place_card;
+
+    public GameObject Deck;
+
     public Camera camera;
     public int count;
 
@@ -78,7 +84,7 @@ public class UI_hand : MonoBehaviour
 
         pos.Sort();
 
-        float card_padding_z = 300;
+        float card_padding_z = 100;
         // position gen
         List<float> pos_z = new List<float>();
 
@@ -188,14 +194,20 @@ public class UI_hand : MonoBehaviour
 
     public void Draw(/*int id*/)
     {
-        if (count == Max_hand)
+        if (count == Max_hand || Deck.GetComponent<Deck_List>().deck.Count == 0)
         {
             return;
         }
 
-        GameObject obj = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject obj = Instantiate(unit_card, new Vector3(0, 0, 0), Quaternion.identity);
+
+        // obj.GetComponent<Card_Unit>().set_Data(1001);
+
         GameObject gameObject;
+
         obj.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * 5, this.gameObject.transform.localScale.y * 5, this.gameObject.transform.localScale.z);
+
+
         for (int i = 0; i < obj.transform.childCount; i++)
         {
             if (obj.transform.GetChild(i).name == "Name")
@@ -232,7 +244,17 @@ public class UI_hand : MonoBehaviour
         obj.AddComponent<UI_handMove>();
         obj.AddComponent<Card_Unit>();
         //id 수정 필요
-        obj.AddComponent<Card_Unit>().set_Data(1001);
+
+        int index = Deck.GetComponent<Deck_List>().deck.Count;
+
+        index = UnityEngine.Random.Range(0, index - 1);
+
+        index = Deck.GetComponent<Deck_List>().deck[index];
+        Deck.GetComponent<Deck_List>().deck.Remove(index);
+
+        Debug.Log("index : " + index);
+        obj.GetComponent<Card_Unit>().set_Data(index);
+
 
         Myhand.Add(obj);
         count++;

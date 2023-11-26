@@ -172,7 +172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c056dd8af312594f84ca50b7b2773e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 3808297361765984347, guid: ea9574feeef24a64e9d4371d05d25b40, type: 3}
+  unit_card: {fileID: 7631796073962488455, guid: 36377db8ffea09a48b14dfb357329c4b, type: 3}
+  commander_card: {fileID: 3808297361765984347, guid: ea9574feeef24a64e9d4371d05d25b40, type: 3}
+  Magic_card: {fileID: 3808297361765984347, guid: 7c197af1ea5273a46b0d54e077d783a8, type: 3}
+  place_card: {fileID: 3808297361765984347, guid: 1ff4a0756f07baf4eb0cc55661984736, type: 3}
+  Deck: {fileID: 1330870580}
   camera: {fileID: 225646929}
   count: 0
   Myhand:
@@ -269,7 +273,6 @@ GameObject:
   - component: {fileID: 55930574}
   - component: {fileID: 55930573}
   - component: {fileID: 55930572}
-  - component: {fileID: 55930571}
   - component: {fileID: 55930570}
   m_Layer: 0
   m_Name: Plane (28)
@@ -306,18 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &55930571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55930568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &55930572
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -402,7 +393,6 @@ GameObject:
   - component: {fileID: 119745649}
   - component: {fileID: 119745648}
   - component: {fileID: 119745647}
-  - component: {fileID: 119745646}
   - component: {fileID: 119745645}
   m_Layer: 0
   m_Name: Plane (21)
@@ -439,18 +429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &119745646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119745643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &119745647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -535,7 +513,6 @@ GameObject:
   - component: {fileID: 157942788}
   - component: {fileID: 157942787}
   - component: {fileID: 157942786}
-  - component: {fileID: 157942785}
   - component: {fileID: 157942784}
   m_Layer: 0
   m_Name: Plane (3)
@@ -572,18 +549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &157942785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157942782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &157942786
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -668,7 +633,6 @@ GameObject:
   - component: {fileID: 162080570}
   - component: {fileID: 162080569}
   - component: {fileID: 162080568}
-  - component: {fileID: 162080567}
   - component: {fileID: 162080566}
   m_Layer: 0
   m_Name: Plane (23)
@@ -705,18 +669,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &162080567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162080564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &162080568
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -801,7 +753,6 @@ GameObject:
   - component: {fileID: 163208845}
   - component: {fileID: 163208844}
   - component: {fileID: 163208843}
-  - component: {fileID: 163208842}
   - component: {fileID: 163208841}
   m_Layer: 0
   m_Name: Plane (27)
@@ -838,18 +789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &163208842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163208839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &163208843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1026,7 +965,6 @@ GameObject:
   - component: {fileID: 310122498}
   - component: {fileID: 310122497}
   - component: {fileID: 310122496}
-  - component: {fileID: 310122495}
   - component: {fileID: 310122494}
   m_Layer: 0
   m_Name: Plane (14)
@@ -1063,18 +1001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &310122495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310122492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &310122496
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1195,7 +1121,6 @@ GameObject:
   - component: {fileID: 389016647}
   - component: {fileID: 389016646}
   - component: {fileID: 389016645}
-  - component: {fileID: 389016644}
   - component: {fileID: 389016643}
   m_Layer: 0
   m_Name: Plane (15)
@@ -1232,18 +1157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &389016644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389016641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &389016645
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1328,7 +1241,6 @@ GameObject:
   - component: {fileID: 471388043}
   - component: {fileID: 471388042}
   - component: {fileID: 471388041}
-  - component: {fileID: 471388040}
   - component: {fileID: 471388039}
   m_Layer: 0
   m_Name: Plane (8)
@@ -1365,18 +1277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &471388040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471388037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &471388041
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1719,7 +1619,6 @@ GameObject:
   - component: {fileID: 588828278}
   - component: {fileID: 588828277}
   - component: {fileID: 588828276}
-  - component: {fileID: 588828275}
   - component: {fileID: 588828274}
   m_Layer: 0
   m_Name: Plane (2)
@@ -1756,18 +1655,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &588828275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588828272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &588828276
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1852,7 +1739,6 @@ GameObject:
   - component: {fileID: 602422718}
   - component: {fileID: 602422717}
   - component: {fileID: 602422716}
-  - component: {fileID: 602422715}
   - component: {fileID: 602422714}
   m_Layer: 0
   m_Name: Plane (12)
@@ -1889,18 +1775,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &602422715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602422712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &602422716
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2173,7 +2047,6 @@ GameObject:
   - component: {fileID: 889301278}
   - component: {fileID: 889301277}
   - component: {fileID: 889301276}
-  - component: {fileID: 889301275}
   - component: {fileID: 889301274}
   m_Layer: 0
   m_Name: Plane (20)
@@ -2210,18 +2083,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &889301275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889301272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &889301276
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2306,7 +2167,6 @@ GameObject:
   - component: {fileID: 972864776}
   - component: {fileID: 972864775}
   - component: {fileID: 972864774}
-  - component: {fileID: 972864773}
   - component: {fileID: 972864772}
   m_Layer: 0
   m_Name: Plane (10)
@@ -2343,18 +2203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &972864773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972864770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &972864774
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2439,7 +2287,6 @@ GameObject:
   - component: {fileID: 985616515}
   - component: {fileID: 985616514}
   - component: {fileID: 985616513}
-  - component: {fileID: 985616512}
   - component: {fileID: 985616511}
   m_Layer: 0
   m_Name: Plane (4)
@@ -2476,18 +2323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &985616512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985616509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &985616513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2572,7 +2407,6 @@ GameObject:
   - component: {fileID: 997262060}
   - component: {fileID: 997262059}
   - component: {fileID: 997262058}
-  - component: {fileID: 997262057}
   - component: {fileID: 997262056}
   m_Layer: 0
   m_Name: Plane (7)
@@ -2609,18 +2443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &997262057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997262054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &997262058
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3017,7 +2839,6 @@ GameObject:
   - component: {fileID: 1153505641}
   - component: {fileID: 1153505640}
   - component: {fileID: 1153505639}
-  - component: {fileID: 1153505638}
   - component: {fileID: 1153505637}
   m_Layer: 0
   m_Name: Plane (26)
@@ -3054,18 +2875,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1153505638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153505635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1153505639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3150,7 +2959,6 @@ GameObject:
   - component: {fileID: 1164914025}
   - component: {fileID: 1164914024}
   - component: {fileID: 1164914023}
-  - component: {fileID: 1164914022}
   - component: {fileID: 1164914021}
   m_Layer: 0
   m_Name: Plane (22)
@@ -3187,18 +2995,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1164914022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164914019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1164914023
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3283,7 +3079,6 @@ GameObject:
   - component: {fileID: 1231652845}
   - component: {fileID: 1231652844}
   - component: {fileID: 1231652843}
-  - component: {fileID: 1231652842}
   - component: {fileID: 1231652841}
   m_Layer: 0
   m_Name: Plane (18)
@@ -3320,18 +3115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1231652842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231652839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1231652843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3416,7 +3199,6 @@ GameObject:
   - component: {fileID: 1263370342}
   - component: {fileID: 1263370341}
   - component: {fileID: 1263370340}
-  - component: {fileID: 1263370339}
   - component: {fileID: 1263370338}
   m_Layer: 0
   m_Name: Plane (11)
@@ -3453,18 +3235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1263370339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263370336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1263370340
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3549,7 +3319,6 @@ GameObject:
   - component: {fileID: 1301255233}
   - component: {fileID: 1301255232}
   - component: {fileID: 1301255231}
-  - component: {fileID: 1301255230}
   - component: {fileID: 1301255229}
   m_Layer: 0
   m_Name: Plane (1)
@@ -3586,18 +3355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1301255230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301255227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1301255231
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3670,6 +3427,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301255227}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1330870580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330870582}
+  - component: {fileID: 1330870581}
+  m_Layer: 0
+  m_Name: Deck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1330870581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330870580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c8dc53027312d46ad200d526b04e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: e9030000ea030000eb030000ec030000ed030000e9030000ea030000eb030000ec030000ed030000
+--- !u!4 &1330870582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330870580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.969261, y: 19.272202, z: -14.263168}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388053890
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,7 +3484,6 @@ GameObject:
   - component: {fileID: 1388053896}
   - component: {fileID: 1388053895}
   - component: {fileID: 1388053894}
-  - component: {fileID: 1388053893}
   - component: {fileID: 1388053892}
   m_Layer: 0
   m_Name: Plane (24)
@@ -3719,18 +3520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1388053893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388053890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1388053894
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3815,7 +3604,6 @@ GameObject:
   - component: {fileID: 1391720633}
   - component: {fileID: 1391720632}
   - component: {fileID: 1391720631}
-  - component: {fileID: 1391720630}
   - component: {fileID: 1391720629}
   m_Layer: 0
   m_Name: Plane (30)
@@ -3852,18 +3640,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1391720630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391720627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1391720631
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3969,7 +3745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  card: {fileID: 3808297361765984347, guid: ea9574feeef24a64e9d4371d05d25b40, type: 3}
+  card: {fileID: 7631796073962488455, guid: 36377db8ffea09a48b14dfb357329c4b, type: 3}
   Cost: 5
   Cost_List:
   - {fileID: 1748555019}
@@ -4081,7 +3857,6 @@ GameObject:
   - component: {fileID: 1463270107}
   - component: {fileID: 1463270106}
   - component: {fileID: 1463270105}
-  - component: {fileID: 1463270104}
   - component: {fileID: 1463270103}
   m_Layer: 0
   m_Name: Plane (17)
@@ -4118,18 +3893,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1463270104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463270101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1463270105
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4211,6 +3974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1556792801}
+  - component: {fileID: 1556792802}
   m_Layer: 0
   m_Name: PlaneGroup
   m_TagString: Untagged
@@ -4263,6 +4027,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1556792802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556792800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20d9cf7266b5a34ea8b441adc585f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {fileID: 2468089136890153995, guid: ffc50dbe647de9c4387cd292f542d698, type: 3}
 --- !u!1 &1562013307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,7 +4144,6 @@ GameObject:
   - component: {fileID: 1610731301}
   - component: {fileID: 1610731300}
   - component: {fileID: 1610731299}
-  - component: {fileID: 1610731298}
   - component: {fileID: 1610731297}
   m_Layer: 0
   m_Name: Plane (5)
@@ -4404,18 +4180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1610731298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610731295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1610731299
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4627,10 +4391,10 @@ MonoBehaviour:
   dataForms:
   - dataList:
     - {fileID: 11400000, guid: 113545107f1757c458c887cbbab40334, type: 2}
-  commander_DataList: []
-  unit_DataList: []
-  magic_DataList: []
-  buff_manager: []
+    - {fileID: 11400000, guid: ab09b79174b452647bd5bb78b6880dd8, type: 2}
+    - {fileID: 11400000, guid: 1e3d7b21317ba5444bafbe55fa5dc9da, type: 2}
+    - {fileID: 11400000, guid: 76dbd6d558beb78448da7f0de0bcdc52, type: 2}
+    - {fileID: 11400000, guid: b3fdcd84d96890d4ead8a542f4b3f1ec, type: 2}
 --- !u!4 &1653798506
 Transform:
   m_ObjectHideFlags: 0
@@ -4800,7 +4564,6 @@ GameObject:
   - component: {fileID: 1740225581}
   - component: {fileID: 1740225580}
   - component: {fileID: 1740225579}
-  - component: {fileID: 1740225578}
   - component: {fileID: 1740225577}
   m_Layer: 0
   m_Name: Plane (6)
@@ -4837,18 +4600,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1740225578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740225575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1740225579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5221,7 +4972,6 @@ GameObject:
   - component: {fileID: 1875284040}
   - component: {fileID: 1875284039}
   - component: {fileID: 1875284038}
-  - component: {fileID: 1875284037}
   - component: {fileID: 1875284036}
   m_Layer: 0
   m_Name: Plane (16)
@@ -5258,18 +5008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1875284037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875284034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1875284038
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5448,7 +5186,6 @@ GameObject:
   - component: {fileID: 1976674321}
   - component: {fileID: 1976674320}
   - component: {fileID: 1976674319}
-  - component: {fileID: 1976674318}
   - component: {fileID: 1976674317}
   m_Layer: 0
   m_Name: Plane (19)
@@ -5485,18 +5222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &1976674318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976674315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1976674319
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5649,7 +5374,6 @@ GameObject:
   - component: {fileID: 2021127802}
   - component: {fileID: 2021127801}
   - component: {fileID: 2021127800}
-  - component: {fileID: 2021127799}
   - component: {fileID: 2021127798}
   m_Layer: 0
   m_Name: Plane (13)
@@ -5686,18 +5410,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &2021127799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021127796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &2021127800
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5782,7 +5494,6 @@ GameObject:
   - component: {fileID: 2037970445}
   - component: {fileID: 2037970444}
   - component: {fileID: 2037970443}
-  - component: {fileID: 2037970442}
   - component: {fileID: 2037970441}
   m_Layer: 0
   m_Name: Plane (29)
@@ -5819,18 +5530,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &2037970442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037970439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &2037970443
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5915,7 +5614,6 @@ GameObject:
   - component: {fileID: 2058815288}
   - component: {fileID: 2058815287}
   - component: {fileID: 2058815286}
-  - component: {fileID: 2058815285}
   - component: {fileID: 2058815284}
   m_Layer: 0
   m_Name: Plane (25)
@@ -5952,18 +5650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &2058815285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058815282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &2058815286
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6124,7 +5810,6 @@ GameObject:
   - component: {fileID: 2130651173}
   - component: {fileID: 2130651172}
   - component: {fileID: 2130651171}
-  - component: {fileID: 2130651170}
   - component: {fileID: 2130651169}
   m_Layer: 0
   m_Name: Plane (9)
@@ -6161,18 +5846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverMaterial: {fileID: 2100000, guid: db1373602c099a64389788f2ec7f87b9, type: 2}
---- !u!114 &2130651170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130651167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f271525ae812bef44b5fecea6c4d4025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &2130651171
 MeshCollider:
   m_ObjectHideFlags: 0
