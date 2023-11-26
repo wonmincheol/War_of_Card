@@ -8,10 +8,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public ArrCardData[] dataForms;
-    public List<CardData> commander_DataList = new List<CardData>();
-    public List<CardData> unit_DataList = new List<CardData>();
-    public List<CardData> magic_DataList = new List<CardData>();
-    public List<Buff> buff_manager = new List<Buff>();
 
 
 

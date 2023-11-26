@@ -232,7 +232,7 @@ public class UI_hand : MonoBehaviour
         obj.AddComponent<UI_handMove>();
         obj.AddComponent<Card_Unit>();
         //id 수정 필요
-        obj.AddComponent<Card_Unit>().set_Date(1001);
+        obj.AddComponent<Card_Unit>().set_Data(1001);
 
         Myhand.Add(obj);
         count++;
