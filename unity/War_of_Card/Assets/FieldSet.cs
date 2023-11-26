@@ -26,7 +26,27 @@ public class FieldSet : MonoBehaviour
     {
 
     }
+    public void clean_field()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                map[i, j].GetComponent<FieldState>().move_possible_point = false;
+            }
+        }
+    }
 
+    public void full_field()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                map[i, j].GetComponent<FieldState>().move_possible_point = true;
+            }
+        }
+    }
     void set_field()
     {
         map = new GameObject[6, 5];

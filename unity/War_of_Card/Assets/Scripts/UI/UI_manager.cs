@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 
 
-enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY, CARD, NULL };
+enum State { PLCAE, MAGIC, COMMANDER, UNIT, DECK, GY, CARD, NULL, FIELD };
 
 public class UI_manager : MonoBehaviour
 {
@@ -29,6 +29,9 @@ public class UI_manager : MonoBehaviour
     //코스트 자식 오브젝트
     GameObject Cost_object = null;
     // Start is called before the first frame update
+
+
+    public GameObject SelectObject;
 
     public List<GameObject> Cost_List = new List<GameObject>();
     void Start()
@@ -147,6 +150,10 @@ public class UI_manager : MonoBehaviour
                 {
                     state = State.CARD;
                 }
+                else if (hitObject.tag == "FIELD")
+                {
+                    state = State.FIELD;
+                }
 
 
 
@@ -179,6 +186,7 @@ public class UI_manager : MonoBehaviour
                         {
                             if (summonObject != null && summonObject.transform.childCount == 0)
                             {
+                                Debug.Log("hitobject : " + hitObject.name);
                                 Get_Card(hitObject.name).transform.parent = summonObject.transform;
                                 GameObject obj = summonObject.transform.GetChild(0).gameObject;
                                 if (camera.ScreenToViewportPoint(hitObject.transform.position).x < 0)
@@ -190,10 +198,30 @@ public class UI_manager : MonoBehaviour
                                     obj.transform.localPosition = new Vector3(-250, hitObject.transform.position.y, -120);
 
                                 }
+
+
+                                SelectObject = hitObject;
+                                SelectObject.transform.parent.parent.gameObject.GetComponent<FieldSet>().clean_field();
+
+                                SelectObject.GetComponent<UnitMovement>().select();
+
                             }
                         }
                         break;
                     case State.CARD:
+                        break;
+                    case State.FIELD:
+
+                        if (SelectObject != null && hitObject.GetComponent<FieldState>().move_possible_point == true)
+                        {
+                            SelectObject.transform.parent = hitObject.transform;
+                            SelectObject.GetComponent<UnitMovement>().MoveTarget = hitObject.transform.position;
+                            SelectObject.transform.parent.parent.gameObject.GetComponent<FieldSet>().clean_field();
+                            SelectObject = null;
+
+                        }
+
+
                         break;
                     default:
                         break;
@@ -203,14 +231,22 @@ public class UI_manager : MonoBehaviour
         }
     }
 
+
+    void Mouse_Hoverling()
+    {
+
+    }
+
+
     // 인풋으로 알맞는 카드 찾아서 가져오기
     public GameObject Get_Card(String s)
     {
         GameObject obj = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
         GameObject gameObject;
+        Boolean check_name_set = false;
         for (int i = 0; i < obj.transform.childCount; i++)
         {
-            if (obj.transform.GetChild(i).name == "Name")
+            if (obj.transform.GetChild(i).name == "Canves")
             {
                 gameObject = obj.transform.GetChild(i).gameObject;
 
@@ -224,11 +260,11 @@ public class UI_manager : MonoBehaviour
                 if (gameObject.name == "Name_text")
                 {
                     gameObject.GetComponent<TextMeshPro>().text = s;
+                    check_name_set = true;
                     break;
                 }
             }
         }
-
 
         obj.transform.parent = this.transform;
 

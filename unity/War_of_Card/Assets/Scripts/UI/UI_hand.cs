@@ -9,6 +9,8 @@ using UnityEngine;
 public class UI_hand : MonoBehaviour
 {
     //Temp : Card_generate develop
+    public GameObject unit_prefabs;
+
     public GameObject unit_card;
     public GameObject commander_card;
     public GameObject Magic_card;

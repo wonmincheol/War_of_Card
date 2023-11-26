@@ -16,7 +16,7 @@ MonoBehaviour:
   card_Type: 85
   card_Name: "\uC544\uC57C\uB124"
   card_Cost: 1
-  card_Sprite: {fileID: 0}
+  card_Sprite: {fileID: 21300000, guid: f9dee0c2d833556438bd4c1faeb97054, type: 3}
   card_Description: "\uC2DC\uD5D8\uC6A9"
   max_HP: 1
   damage: 1

@@ -111,6 +111,11 @@ public class UI_handMove : MonoBehaviour
                 ui_Hand.count--;
                 ui_Hand.hand_position();
 
+                GameObject init = Instantiate(this.transform.parent.GetComponent<UI_hand>().unit_prefabs, Vector3.zero, Quaternion.identity);
+                init.name = this.gameObject.GetComponent<Card_Unit>().card_date.card_Name;
+                this.transform.parent.parent.gameObject.GetComponent<UI_manager>().SelectObject = init;
+                GameObject.Find("PlaneGroup").GetComponent<FieldSet>().full_field();
+
                 Destroy(this.gameObject);
                 return;
             }

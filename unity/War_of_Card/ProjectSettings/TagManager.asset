@@ -7,6 +7,8 @@ TagManager:
   - Card
   - DECK
   - GRA
+  - UNIT
+  - FIELD
   layers:
   - Default
   - TransparentFX
