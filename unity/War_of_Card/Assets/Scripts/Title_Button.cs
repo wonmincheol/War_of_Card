@@ -37,6 +37,6 @@ public class Title_Button : MonoBehaviour
 
     public void Deck()
     {
-        SceneManager.LoadScene("Deck_Scene");
+        SceneManager.LoadScene("1");
     }
 }

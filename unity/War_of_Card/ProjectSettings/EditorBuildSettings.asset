@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Main_game/Play_Scene.unity
     guid: 4ff1c976f085dcd44a1f87ab29b72933
   - enabled: 1
-    path: Assets/Scenes/Main_game/Deck_Scene.unity
-    guid: 4e3b4e239f5d0184b8ad0aa0475ab659
+    path: Assets/Scenes/Main_game/Deck/1.unity
+    guid: 1fad9ec70363daf48982284b2636f46e
+  - enabled: 1
+    path: Assets/Scenes/Main_game/Deck/2.unity
+    guid: 1f4f260764e72463fa4229bfad2c5005
+  - enabled: 1
+    path: Assets/Scenes/Main_game/Deck/3.unity
+    guid: fa3fe1cae64ad452882ab8094d8f1fc2
   m_configObjects: {}
