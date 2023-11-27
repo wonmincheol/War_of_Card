@@ -9,6 +9,7 @@ public class board : MonoBehaviour
     [SerializeField]
     private Material[] cardSprite;
     private List<int> cardIDList = new List<int>();
+    private List<car> cardList = new List<car>();
     void Start()
     {
         GenerateCardID();
@@ -41,12 +42,15 @@ public class board : MonoBehaviour
                 int cardID = cardIDList[cardIndex++];
                 card.setCardID(cardID);
                 card.SetanimalSprite(cardSprite[cardID]);
-                
+                cardList.Add(card);
 
             }
         }
     }
  
-    
+    public List<car> GetCars()
+    {
+        return cardList;
+    }
         
     }
